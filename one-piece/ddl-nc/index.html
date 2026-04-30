@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DDL — Non Compressé — Chromatique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0e1117;
+      --bg2: #161b27;
+      --card: #1c2333;
+      --border: #2a3347;
+      --accent1: #e8453c;
+      --accent2: #f5a623;
+      --accent3: #4ecb8d;
+      --text: #e8eaf0;
+      --muted: #6b7a99;
+      --rainbow1: #e8453c;
+      --rainbow2: #f5a623;
+      --rainbow3: #f5e623;
+      --rainbow4: #4ecb8d;
+      --rainbow5: #3c9be8;
+      --rainbow6: #7c3ce8;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .rainbow-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--rainbow1), var(--rainbow2), var(--rainbow3), var(--rainbow4), var(--rainbow5), var(--rainbow6));
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 480px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 180px; height: 180px;
+      background: radial-gradient(circle, rgba(232,69,60,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .team-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      background: linear-gradient(135deg, var(--rainbow1), var(--rainbow2), var(--rainbow3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .manga-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      color: var(--text);
+      margin: 1.5rem 0 0.3rem;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .subtitle::before {
+      content: '';
+      display: inline-block;
+      width: 20px; height: 2px;
+      background: linear-gradient(90deg, var(--rainbow1), var(--rainbow2));
+      border-radius: 2px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1.2rem;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(232,69,60,0.08), rgba(245,166,35,0.08));
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .btn:hover {
+      border-color: var(--accent2);
+      transform: translateX(4px);
+    }
+
+    .btn:hover::before { opacity: 1; }
+
+    .btn.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .btn-icon { font-size: 1.1rem; flex-shrink: 0; }
+
+    .btn span:nth-child(2) { flex: 1; }
+
+    .btn-arrow {
+      font-size: 0.8rem;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
+    .btn:hover .btn-arrow { color: var(--accent2); }
+
+    .footer {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="rainbow-bar"></div>
+  <div class="card">
+    <div class="header">
+      <img class="logo" src="https://ugc.production.linktr.ee/3D6PzXg6SgyqsZedeTy7_xtVc39Kh9Vg0nRf5?io=true&size=avatar-v3_0" alt="Chromatique">
+      <div>
+        <div class="team-name">Chromatique</div>
+      </div>
+    </div>
+    <div class="manga-title">One Piece</div>
+    <div class="subtitle">DDL — Non Compressé</div>
+    <div class="links">
+
+        <a class="btn" href="https://mega.nz/folder/hqNUyRAJ#GuRxOgxdmbRCtHqCmef96A" target="_blank" rel="noopener">
+          <span class="btn-icon">📥</span>
+          <span>Tomes 01 à 03 — Edition Perfect</span>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a class="btn" href="https://mega.nz/folder/fj5lEBqZ#U0z8-vMW0mws9fUu6F-o7A" target="_blank" rel="noopener">
+          <span class="btn-icon">📥</span>
+          <span>Tomes 04 à 30</span>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a class="btn" href="https://mega.nz/folder/DJUQBQaK#Q1G_8WG9TieONMEd1Fc3KA" target="_blank" rel="noopener">
+          <span class="btn-icon">📥</span>
+          <span>Tomes 31 à 50</span>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a class="btn" href="https://mega.nz/folder/uRUQTRbY#QAhw3AzMkDw3zecmLAQcwg" target="_blank" rel="noopener">
+          <span class="btn-icon">📥</span>
+          <span>Tomes 51 à 70</span>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a class="btn" href="https://mega.nz/folder/iYFRQCpA#sPAywXbBejGnzwaqYbBJ_g" target="_blank" rel="noopener">
+          <span class="btn-icon">📥</span>
+          <span>Tomes 71 à 92</span>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a class="btn" href="https://mega.nz/folder/fFd00B5D#9ptknhvmvC03OmcCSafCKQ" target="_blank" rel="noopener">
+          <span class="btn-icon">📥</span>
+          <span>Tomes 93 à ???</span>
+          <span class="btn-arrow">↗</span>
+        </a>
+    </div>
+    <div class="footer">Edition couleur · Team Chromatique</div>
+  </div>
+</body>
+</html>
