@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MW — Torrent — Non Compressé — Chromatique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0e1117; --bg2: #161b27; --card: #1c2333; --border: #2a3347; --text: #e8eaf0; --muted: #6b7a99; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem 1rem; }
+    .rainbow-bar { position: fixed; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #e8453c, #f5a623, #f5e623, #4ecb8d, #3c9be8, #7c3ce8); }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem 2rem; width: 100%; max-width: 480px; position: relative; overflow: hidden; }
+    .card::before { content: ''; position: absolute; top: -60px; right: -60px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(232,69,60,0.12) 0%, transparent 70%); pointer-events: none; }
+    .header { display: flex; align-items: center; gap: 1rem; }
+    .logo { width: 48px; height: 48px; border-radius: 12px; object-fit: cover; flex-shrink: 0; }
+    .team-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 2px; background: linear-gradient(135deg, #e8453c, #f5a623, #f5e623); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .manga-cover { width: 100%; height: auto; border-radius: 12px; margin: 1.2rem 0 0; }
+    .subtitle { font-size: 0.85rem; color: var(--muted); margin: 1rem 0 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .subtitle::before { content: ''; display: inline-block; width: 20px; height: 2px; background: linear-gradient(90deg, #e8453c, #f5a623); border-radius: 2px; }
+    .soon-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; text-align: center; }
+    .soon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .soon-text { color: var(--muted); font-size: 0.9rem; }
+    .footer { margin-top: 1.5rem; text-align: center; font-size: 0.75rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="rainbow-bar"></div>
+  <div class="card">
+    <div class="header">
+      <img class="logo" src="https://ugc.production.linktr.ee/3D6PzXg6SgyqsZedeTy7_xtVc39Kh9Vg0nRf5?io=true&size=avatar-v3_0" alt="Chromatique">
+      <div><div class="team-name">Chromatique</div></div>
+    </div>
+    <img class="manga-cover" src="https://cdn.imgchest.com/files/1cb3c4c73ca7.JPG" alt="MW">
+    <div class="subtitle">Torrent — Non Compressé</div>
+    <div class="soon-box"><div class="soon">⏳</div><div class="soon-text">Bientôt disponible !</div></div>
+    <div class="footer">Edition couleur · Team Chromatique</div>
+  </div>
+</body>
+</html>
