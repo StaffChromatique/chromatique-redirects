@@ -15,8 +15,11 @@
     .logo { width: 48px; height: 48px; border-radius: 12px; object-fit: cover; flex-shrink: 0; }
     .team-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 2px; background: linear-gradient(135deg, #e8453c, #f5a623, #f5e623); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .manga-cover { width: 100%; height: auto; border-radius: 12px; margin: 1.2rem 0 0; }
-    .subtitle { font-size: 0.85rem; color: var(--muted); margin: 1rem 0 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .subtitle { font-size: 0.85rem; color: var(--muted); margin: 1rem 0 1rem; display: flex; align-items: center; gap: 0.5rem; }
     .subtitle::before { content: ''; display: inline-block; width: 20px; height: 2px; background: linear-gradient(90deg, #e8453c, #f5a623); border-radius: 2px; }
+    .notice { border-radius: 10px; padding: 0.8rem 1rem; font-size: 0.82rem; line-height: 1.6; margin-bottom: 0.6rem; }
+    .notice-gold { background: rgba(245,166,35,0.08); border: 1px solid rgba(245,166,35,0.25); color: #c9a96e; }
+    .notice-gray { background: rgba(107,122,153,0.08); border: 1px solid rgba(107,122,153,0.2); color: #8a9ab8; margin-bottom: 1.2rem; }
     .btn { display: flex; align-items: center; gap: 0.75rem; padding: 0.85rem 1.2rem; background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; color: var(--text); text-decoration: none; font-size: 0.95rem; font-weight: 500; margin-bottom: 0.6rem; transition: all 0.2s ease; position: relative; overflow: hidden; }
     .btn::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(232,69,60,0.08), rgba(245,166,35,0.08)); opacity: 0; transition: opacity 0.2s; }
     .btn:hover { border-color: #f5a623; transform: translateX(4px); }
@@ -40,7 +43,12 @@
     </div>
     <img class="manga-cover" src="https://cdn.imgchest.com/files/2575924def67.png" alt="One Piece">
     <div class="subtitle">DDL — Compressé</div>
-    <div class="links"><a class="btn" href="https://mega.nz/folder/Ji0CBQrS#1oJJvvFRd2qE3_OoAV4yrw" target="_blank" rel="noopener"><span class="btn-icon">📥</span><span>Tomes 01 à 03 — Edition Perfect</span><span class="btn-arrow">↗</span></a><a class="btn" href="https://mega.nz/folder/U39n0QJL#yMFRgB07f83F3JO2MUNBNA" target="_blank" rel="noopener"><span class="btn-icon">📥</span><span>Tomes 04 à ???</span><span class="btn-arrow">↗</span></a></div>
+    <div class="notice notice-gold">✨ Les tomes 01 à 03 sont en version <strong style="color:#f5c842;">Perfect Edition</strong> : sommaires avec numérotation personnalisée, pages bonus, intégration des onomatopées (SFX Glénat), correction orthographique, recolorisation complète des vignettes, reconstruction des images illisibles. Résolution 4K.</div>
+    <div class="notice notice-gray">ℹ️ Les tomes suivants sont en édition colorisée standard : les personnages et éléments principaux sont colorisés, mais certains fonds et effets visuels (onomatopées, décors complexes) restent en noir et blanc faute de redraw.</div>
+    <div class="links">
+      <a class="btn" href="https://mega.nz/folder/Ji0CBQrS#1oJJvvFRd2qE3_OoAV4yrw" target="_blank" rel="noopener"><span class="btn-icon">📥</span><span>Tomes 01 à 03 — Perfect Edition</span><span class="btn-arrow">↗</span></a>
+      <a class="btn" href="https://mega.nz/folder/U39n0QJL#yMFRgB07f83F3JO2MUNBNA" target="_blank" rel="noopener"><span class="btn-icon">📥</span><span>Tomes 04 à ???</span><span class="btn-arrow">↗</span></a>
+    </div>
     <div class="footer">Edition couleur · Team Chromatique</div>
   </div>
 </body>
